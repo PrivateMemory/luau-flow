@@ -40,20 +40,6 @@ class Flow : public Singleton<Flow>
 
 public:
 
-    /**
-     * @brief Simulates VM_PROTECT
-     *
-     * @param L
-     * @param ctx
-     * @param f
-     */
-    /*void ProtectedCall(lua_State* L, ExecutionContext ctx, std::function<void()> f)
-    {
-        L->ci->savedpc = *ctx.pc;
-        f();
-        *ctx.base = L->base;
-    }*/
-
     void set_pre_op(pre_op_t op)
     {
         pre_op = op;
