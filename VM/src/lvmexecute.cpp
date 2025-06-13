@@ -276,6 +276,7 @@ reentry:
     base = L->base;
     k = cl->l.p->k;
 
+    Flow::getInstance().NewProtection(&base);
     VM_NEXT(); // starts the interpreter "loop"
     {
     dispatch:
